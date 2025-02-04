@@ -1,25 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-
+    const loginForm = document.getElementById('login-form');
     const loginButton = document.getElementById('login-button');
-    const clearButton = document.getElementById('clear-button');
+    const signupButton = document.getElementById('signup-button');
 
-    const usernameField = document.getElementById('username');
-    const passwordField = document.getElementById('password');
+    const users = JSON.parse(localStorage.getItem('users')) || [];
 
-    loginButton.addEventListener('click', function() {
-        const enteredUsername = usernameField.value;
-        const enteredPassword = passwordField.value;
+    loginButton.addEventListener('click', function(event) { 
+        event.preventDefault(); 
 
-        if (enteredUsername === enteredPassword ) {
-            window.location.href = '../landing-page/landing-page.html'; // Replace with your actual landing page URL
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+
+        if (!username || !password) {
+            alert('Please fill in all fields');
+            return;
+        }
+
+        const user = users.find(u => u.username === username && u.password === password);
+
+        if (user) {
+            console.log("Login successful!"); 
+            alert('Login successful! Redirecting...');
+
+            window.location.href = '/landing-page/landing-page.html';
+            
+
         } else {
-            alert("Invalid username or password!");
+            alert('Invalid credentials! Please try again');
         }
     });
 
-    clearButton.addEventListener('click', function() {
-        usernameField.value = "";
-        passwordField.value = "";
+    signupButton.addEventListener('click', function() {
+        window.location.href = '/Sign-up/signup.html'; 
+        
     });
 });

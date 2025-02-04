@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
     <link rel="stylesheet" href="../Style css/style_landing.css">
-    <script src="script.js"></script>
-    <title>Main Menu</title>
 </head>
 <body>
-    <div class="main">
-        <div class="header">    
-            <div class="button" id="logo" onclick="window.location.href='../landing-page/landing-page.html'">Logo</div>
-            <div class="buttons">
-                <button class="button" onclick="window.location.href='../master-page/master-form.html'">Master</button>
-                <button class="button">Scan</button>
-                <button class="button">Material in</button>
-                <button class="button">Material out</button>
-                <button class="button">View List</button>
-                <button class="button">Logout</button>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <div class="planet"></div>
+            <p class="brand-name">M A R T I A N</p>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="/master-page/master-form.html">Master</a></li>
+                <li><a href="#">Scan</a></li>
+                <li><a href="#">Material-In</a></li>
+                <li><a href="#">Material-Out</a></li>
+                <li><a href="#">View List</a></li>
+            </ul>
+        </nav>
+        <div class="menu-container">
+            <button class="menu-button">Menu</button>
+            <div class="dropdown-menu">
+                <a href="#">Print Location</a>
+                <a href="#">Print User Details</a>
+                <a href="#">Check with Main Sheet</a>
+                <a href="#">Backup</a>
+                <a href="#">Import Excel</a>
+                <a href="../index-page/index.html">Logout</a>
             </div>
         </div>
-        <div class="content">
-            <div class="tabs">
-                <div id="item1" class="menu tab-item">Item 1</div>
-                <div id="item2" class="menu tab-item">Item 2</div>
-                <div id="item3" class="menu tab-item">Item 3</div>
-                <div id="item4" class="menu tab-item">Item 4</div>
-                <div id="item5" class="menu tab-item">Item 5</div>
-                <div id="item6" class="menu tab-item">Item 6</div>
-                <div id="item7" class="menu tab-item">Item 7</div>
-                <div id="item8" class="menu tab-item">Item 8</div>
-            </div>
-        </div>
-    </div>
+    </header>
+
+    <main class="main-content">
+        <h1>Welcome to Martian</h1>
+        <p>Manage your inventory and operations efficiently.</p>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
