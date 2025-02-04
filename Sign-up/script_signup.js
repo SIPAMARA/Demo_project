@@ -33,13 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('users', JSON.stringify(users));
         
         alert('Account created successfully! Redirecting to login...');
-        window.location.href = '../index-page/index.html';
+        window.location.href = '/index.html';
     });
 
     // Login page redirection
     loginLink.addEventListener('click', function(e) {
         e.preventDefault();
-        window.location.href = '../index-page/index.html';
+        window.location.href = '/index.html';
     });
 });document.addEventListener('DOMContentLoaded', function() {
     const signupForm = document.getElementById('signup-form');
@@ -76,11 +76,11 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('users', JSON.stringify(users));
         
         alert('Account created successfully! Redirecting to login...');
-        window.location.href = '/index-page/index.html';
+        window.location.href = '/index.html';
     });
 
     loginLink.addEventListener('click', function(e) {
         e.preventDefault();
-        window.location.href = '/index-page/index.html';
+        window.location.href = '/index.html';
     });
 });
