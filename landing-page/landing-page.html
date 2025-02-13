@@ -10,7 +10,6 @@
     <header class="header">
         <div class="logo">
             <div class="planet"></div>
-            <p class="brand-name">M A R T I A N</p>
         </div>
         
         <!-- Burger Menu -->
@@ -24,31 +23,34 @@
         <nav class="navbar">
             <ul class="nav-list">
                 <li><a href="/master-page/master-form.html">Master</a></li>
-                <li><a href="#">Scan</a></li>
-                <li><a href="#">Material-In</a></li>
-                <li><a href="#">Material-Out</a></li>
-                <li><a href="#">View List</a></li>
+                <li><a href="/Scan-page/scan-page.html">Scan</a></li>
+                <li><a href="/material_in-page/material-page.html">Material-In</a></li>
+                <li><a href="/material_out-page/material-page.html">Material-Out</a></li>
+                <li class="dropdown">
+                    <a href="#">View List ▼</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Print Location</a></li>
+                        <li><a href="#">Check with Main Sheet</a></li>
+                        <li><a href="#">Backup</a></li>
+                        <li><a href="#">Import Excel</a></li>
+                    </ul>
+                </li>
+                 
             </ul>
         </nav>
-    
-        <!-- Right Side Menu -->
+        
         <div class="menu-container">
             <button class="menu-button">Menu</button>
+            <button class="menu-button Logout" href="/index.html">Logout</button>
             <div class="dropdown-menu">
-                <a href="#">Print Location</a>
+                <a href="#">View Details</a>
                 <a href="#">Print User Details</a>
-                <a href="#">Check with Main Sheet</a>
-                <a href="#">Backup</a>
-                <a href="#">Import Excel</a>
-                <a href="/index.html">Logout</a>
+
             </div>
         </div>
     </header>
 
-    <main class="main-content">
-        <h1>Welcome to Martian</h1>
-        <p>Manage your inventory and operations efficiently.</p>
-    </main>
+    
 
     <script src="script.js"></script>
 </body>

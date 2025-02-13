@@ -1,0 +1,3 @@
+add menu item in view report except print user details
+make logout button like menu button
+background white

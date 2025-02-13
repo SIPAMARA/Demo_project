@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Management</title>
+   <link rel="stylesheet" href="/Style css/material-in_out.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Material-In</h1>
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="openAddModal()">Add Material</button>
+                <button class="btn btn-primary" onclick="openAddModal()">View</button>
+                <button class="btn btn-danger" onclick="clearTable()">Clear All</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <table class="material-table">
+            <thead>
+                <tr>
+                    <th>Material Name</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="materialBody">
+                <!-- Table data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add Material Modal -->
+    <div class="add-material-modal" id="addModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeAddModal()">×</span>
+            <h2>Add New Material</h2>
+            <form onsubmit="addMaterial(event)">
+                <div class="form-group">
+                    <label>Material Name</label>
+                    <input type="text" id="materialName" required>
+                </div>
+                <div class="form-group">
+                    <label>Quantity</label>
+                    <input type="number" id="materialQuantity" required>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button type="button" class="btn btn-danger" onclick="closeAddModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+  <script src="/material_in-page/material-in.js"></script>
+</body>
+</html>

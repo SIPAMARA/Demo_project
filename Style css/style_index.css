@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #123524, #3E7B27);
+    background: #EFE3C2;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -32,10 +32,11 @@ body {
 
 /* Form Container */
 .form-container {
+    background-color:#055b00;
     flex: 1;
     padding: 20px;
     text-align: left;
-    background: rgba(239, 227, 194, 0.2);
+    /* background: rgba(239, 227, 194, 0.2); */
 }
 
 h2 {
@@ -116,12 +117,13 @@ button {
 
 /* Right Side Design Section */
 .design-container {
+    background-color:#055b00;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(239, 227, 194, 0.05);
+    /* background: rgba(239, 227, 194, 0.05); */
     padding: 20px;
 }
 

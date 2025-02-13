@@ -26,11 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Logout confirmation
-    document.querySelector('.dropdown-menu').addEventListener('click', function(event) {
+    document.querySelector('.Logout').addEventListener('click', function(event) {
         if (event.target.textContent === 'Logout') {
             event.preventDefault();
             if (confirm("Are you sure you want to logout?")) {
-                // localStorage.removeItem('users');
                 window.location.href = '/index.html';
             }
         }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Document</title>
+    <link rel="stylesheet" href="/Style css/scan_page.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Document Scanner</h1>
+            <div>
+                <button class="scan-btn" onclick="openScanner()">Scan Document</button>
+                <a class="scan-btn" href="/landing-page/landing-page.html">Exit</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="scan-page" id="scanPage">
+        <div class="scan-container">
+            <div class="scan-area">
+                <div class="scan-animation"></div>
+                <div class="scan-placeholder">
+                    <p>Scan the code</p>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn upload-btn" onclick="uploadDocument()">Add</button>
+                <button class="action-btn exit-btn" onclick="closeScanner()">Cancel</button>
+            </div>
+        </div>
+        <div class="exit-icon" onclick="closeScanner()">✕</div>
+    </div>
+
+    <script src="/Scan-page/scan-page.js"></script>
+</body>
+</html>
