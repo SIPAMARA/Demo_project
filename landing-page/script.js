@@ -3,9 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     const menuButton = document.querySelector('.menu-button');
     const dropdownMenu = document.querySelector('.dropdown-menu');
+    const viewListToggle = document.getElementById('viewListToggle');
+    const logoutButton = document.querySelector('.Logout');
 
     // Toggle burger menu
-    burgerMenu.addEventListener('click', function() {
+    burgerMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
         navbar.classList.toggle('active');
     });
 
@@ -14,6 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
         e.stopPropagation();
         dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
     });
+
+    // Toggle "View List" dropdown in mobile view
+    if (viewListToggle) {
+        const dropdownContent = viewListToggle.nextElementSibling;
+        viewListToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+    }
 
     // Close menus when clicking outside
     document.addEventListener('click', function(event) {
@@ -26,12 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Logout confirmation
-    document.querySelector('.Logout').addEventListener('click', function(event) {
-        if (event.target.textContent === 'Logout') {
+    if (logoutButton) {
+        logoutButton.addEventListener('click', function(event) {
             event.preventDefault();
             if (confirm("Are you sure you want to logout?")) {
                 window.location.href = '/index.html';
             }
-        }
-    });
+        });
+    }
 });

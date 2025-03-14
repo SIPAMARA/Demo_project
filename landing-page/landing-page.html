@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="../Style css/style_landing.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="../Style css/style_landing.css">
+ 
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <div class="planet"></div>
-        </div>
-        
-        <!-- Burger Menu -->
-        <div class="burger-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+  <header class="header">
+    <div class="logo">
+      <div class="planet"></div>
+      <!-- <div class="brand-name">MARTIAN</div> -->
+    </div>
     
-        <!-- Main Navigation -->
-        <nav class="navbar">
-            <ul class="nav-list">
-                <li><a href="/master-page/master-form.html">Master</a></li>
-                <li><a href="/Scan-page/scan-page.html">Scan</a></li>
-                <li><a href="/material_in-page/material-page.html">Material-In</a></li>
-                <li><a href="/material_out-page/material-page.html">Material-Out</a></li>
-                <li class="dropdown">
-                    <a href="#">View List ▼</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Print Location</a></li>
-                        <li><a href="#">Check with Main Sheet</a></li>
-                        <li><a href="#">Backup</a></li>
-                        <li><a href="#">Import Excel</a></li>
-                    </ul>
-                </li>
-                 
-            </ul>
-        </nav>
-        
-        <div class="menu-container">
-            <button class="menu-button">Menu</button>
-            <button class="menu-button Logout" href="/index.html">Logout</button>
-            <div class="dropdown-menu">
-                <a href="#">View Details</a>
-                <a href="#">Print User Details</a>
+    <!-- Burger Menu -->
+    <div class="burger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  
+    <!-- Main Navigation -->
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="/master-page/master-form.html">Master</a></li>
+        <li><a href="/Scan-page/scan-page.html">Scan</a></li>
+        <li><a href="/material_in-page/material-page.html">Material-In</a></li>
+        <li><a href="/material_out-page/material-page.html">Material-Out</a></li>
+        <li><a href="#">Generate Pick list</a></li>
+        <!-- <li><a href="#">Scan</a></li> -->
+        <li><a href="#">File-Import</a></li>
+        <li class="dropdown">
+          <a href="#" id="viewListToggle">View List ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="/print-location/print-location.html">Print Location</a></li>
+            <a href="/user-details/user-details.html">Print User Details</a>
 
-            </div>
-        </div>
-    </header>
-
+            <li><a href="#">Check with Main Sheet</a></li>
+            <li><a href="#">Backup</a></li>
+            <li><a href="#">Import Excel</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     
+    <div class="menu-container">
+      <button class="menu-button">Menu</button>
+      <button class="menu-button Logout" href="/index.html">Logout</button>
+      <div class="dropdown-menu">
+        <a href="#">View Details</a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Your main content here -->
+  
+  <script src="/landing-page/script.js"></script>
 
-    <script src="script.js"></script>
 </body>
 </html>

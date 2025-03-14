@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Operations</title>
+    <link rel="stylesheet" href="/Style css/print-loc_user-details.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <div class="planet"></div>
+            <!-- <p class="brand-name">M A R T I A N</p> -->
+        </div>
+        <nav>
+            <button onclick="showPage('user')">User Details</button>
+        </nav>
+    </header>
+
+    
+
+    <div id="user-page"  class="page active-page">
+        <div class="container">
+            <h2>User Details</h2>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>User Name</label>
+                    <select>
+                        <option value="">Select User</option>
+                        <option>John Doe</option>
+                        <option>Jane Smith</option>
+                        <option>Mike Johnson</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Employee ID</label>
+                    <select>
+                        <option value="">Select ID</option>
+                        <option>EMP-001</option>
+                        <option>EMP-002</option>
+                        <option>EMP-003</option>
+                    </select>
+                </div>
+            </div>
+            <div class="button-group">
+                <button class="print-btn">Print User Sticker</button>
+                <button class="clear-btn">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/user-details/script.js"></script>
+
+<body>
+</html>

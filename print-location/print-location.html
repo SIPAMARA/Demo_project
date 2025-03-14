@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Operations</title>
+    <link rel="stylesheet" href="/Style css/print-loc_user-details.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <div class="planet"></div>
+            <!-- <p class="brand-name">M A R T I A N</p> -->
+        </div>
+        <nav>
+            <button onclick="showPage('location')">Print Location</button>
+            <!-- <button onclick="showPage('user')">User Details</button> -->
+        </nav>
+    </header>
+
+    <!-- Print Location Page -->
+    <div id="location-page" class="page active-page">
+        <div class="container">
+            <h2>Print Location</h2>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Location Name</label>
+                    <select>
+                        <option value="">Select Location</option>
+                        <option>L1</option>
+                        <option>L2</option>
+                        <option>L3</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>SR.No </label>                    <select>
+                        <option value="">Select Location</option>
+                        <option>sr001</option>
+                        <option>sr002</option>
+                        <option>sr003</option>
+                    </select>
+                    <input type="text" placeholder="Enter SR.No ">
+
+
+
+                </div>
+            </div>
+            <div class="button-group">
+                <button class="print-btn">Print Location</button>
+                <button class="clear-btn">  Clear </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/print-location/script.js"></script>
+</body>
+</html>

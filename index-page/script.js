@@ -34,4 +34,41 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '/Sign-up/signup.html'; 
         
     });
+
+    const verticalNavbar = document.querySelector('.vertical-navbar');
+    const inputs = document.querySelectorAll('input');
+    let hoverCount = 0;
+    
+    // Function to hide the sidebar
+    function hideSidebar() {
+      verticalNavbar.style.opacity = '0';
+      setTimeout(() => {
+        verticalNavbar.style.display = 'none';
+      }, 300);
+    }
+    
+    // Function to show the sidebar
+    function showSidebar() {
+      verticalNavbar.style.display = 'flex';
+      setTimeout(() => {
+        verticalNavbar.style.opacity = '0.8';
+      }, 10);
+    }
+    
+    // Attach mouseenter and mouseleave events to each input field
+    inputs.forEach(input => {
+      input.addEventListener('mouseenter', () => {
+        hoverCount++;
+        hideSidebar();
+      });
+      
+      input.addEventListener('mouseleave', () => {
+        hoverCount--;
+        // If the cursor is no longer over any input, show the sidebar
+        if (hoverCount <= 0) {
+          showSidebar();
+        }
+      });
+    });
+  
 });

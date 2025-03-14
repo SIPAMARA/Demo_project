@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="../Style css/style_landing.css">
+  <style>
+    /* General Styles */
+    body {
+      background: #fff;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #EFE3C2;
+    }
+    
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: relative;
+      background-color: #3E7B27;
+      color: #EFE3C2;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .planet {
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(circle, #3E7B27, #123524);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(239, 227, 194, 0.5);
+    }
+    
+    .brand-name {
+      margin-left: 10px;
+      font-size: 18px;
+      letter-spacing: 3px;
+    }
+    
+    /* Mobile Burger Menu */
+    .burger-menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #EFE3C2;
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+    
+    /* Navigation */
+    .navbar {
+      display: flex;
+    }
+    
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-list li {
+      margin: 0 15px;
+    }
+    
+    .nav-list li a {
+      color: #EFE3C2;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    
+    .nav-list li a:hover {
+      color: #123524;
+    }
+    
+    /* Right Side Menu */
+    .menu-container {
+      position: relative;
+    }
+    
+    .menu-button {
+      background: #3E7B27;
+      color: #EFE3C2;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+    
+    .menu-button:hover {
+      background: #85A947;
+    }
+    
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      border-radius: 4px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      min-width: 150px;
+      z-index: 100;
+    }
+    
+    .dropdown-menu a {
+      display: block;
+      padding: 10px;
+      color: #2a2323;
+      background: #3E7B27;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    
+    .dropdown-menu a:hover {
+      background: #EFE3C2;
+      border-radius: 2px;
+    }
+    
+    /* Dropdown Menu (View List) */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    /* Desktop dropdown: show on hover */
+    .dropdown-content {
+      list-style: none;
+      text-align: center;
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      z-index: 1000;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: flex
+;
+    flex-direction: column;
+    align-items: self-start;    }
+    
+    .dropdown-content li {
+      padding: 0;
+      /* border-bottom: 1px solid #eee; */
+    }
+    
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #f8f9fa;
+    }
+    
+    /* Responsive Styles for Mobile */
+    @media (max-width: 768px) {
+      .burger-menu {
+        display: flex;
+      }
+      
+      .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #3E7B27;
+        padding: 10px;
+      }
+      
+      .nav-list {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .nav-list li {
+        margin: 5px 0;
+        text-align: center;
+      }
+      
+      .nav-list a {
+        display: block;
+        padding: 10px;
+      }
+      
+      .navbar.active {
+        display: block;
+      }
+      
+      /* For the View List dropdown in mobile: closed by default */
+      .dropdown-content {
+        position: static;
+        display: none;
+        width: 100%;
+        text-align: center;
+        box-shadow: none;
+        background-color: #3E7B27;
+        border-radius: 4px;
+        margin-top: 5px;
+      }
+      
+      /* Remove desktop hover behavior on mobile */
+      .dropdown:hover .dropdown-content {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .brand-name {
+        font-size: 16px;
+      }
+      
+      .menu-button {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+      
+      .main-content h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <div class="planet"></div>
+      <div class="brand-name">MARTIAN</div>
+    </div>
+    
+    <!-- Burger Menu -->
+    <div class="burger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  
+    <!-- Main Navigation -->
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="/master-page/master-form.html">Master</a></li>
+        <li><a href="/Scan-page/scan-page.html">Scan</a></li>
+        <li><a href="/material_in-page/material-page.html">Material-In</a></li>
+        <li><a href="/material_out-page/material-page.html">Material-Out</a></li>
+        <li><a href="#">Generate Pick list</a></li>
+        <li><a href="#">Scan</a></li>
+        <li><a href="#">File-Import</a></li>
+        <li class="dropdown">
+          <a href="#" id="viewListToggle">View List ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Print Location</a></li>
+            <li><a href="#">Check with Main Sheet</a></li>
+            <li><a href="#">Backup</a></li>
+            <li><a href="#">Import Excel</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="menu-container">
+      <button class="menu-button">Menu</button>
+      <button class="menu-button Logout" href="/index.html">Logout</button>
+      <div class="dropdown-menu">
+        <a href="#">View Details</a>
+        <a href="#">Print User Details</a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Your main content here -->
+  <div class="main-content">
+    <h1>Welcome to the Landing Page</h1>
+  </div>
+  
+  <script>
+    // Toggle mobile burger menu (if needed)
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navbar = document.querySelector('.navbar');
+    burgerMenu.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+    
+    // Toggle "View List" dropdown in mobile view
+    const viewListToggle = document.getElementById('viewListToggle');
+    const dropdownContent = viewListToggle.nextElementSibling;
+    
+    viewListToggle.addEventListener('click', (e) => {
+      // Prevent default navigation behavior
+      e.preventDefault();
+      // Toggle the display of the dropdown content
+      if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+      } else {
+        dropdownContent.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

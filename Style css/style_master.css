@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #123524, #3E7B27);
+    background: #EFE3C2;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ body {
 
 /* Master Form Container */
 .master-container {
-    background: rgba(255, 255, 255, 0.1);
+    background: #3E7B27;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);

@@ -1,3 +1,15 @@
-add menu item in view report except print user details
-make logout button like menu button
-background white
+logo container from left  
+location example sr001L1 sr001L2 sr0021L1
+Name L1 L2 
+srno sr001 sr002
+srno seperate text box 
+OCR library Google vision azure
+view details & print user details in master
+Remove menu
+Change the View list background
+
+Visual studio tutorail
+sql management studio tutorail
+-login ID(primary key auto incremented) table usrname password email name designation 
+-Master  ID(auto incremented) Material-name Category unique-no SAPcode Price quantity stock total-price location
+
